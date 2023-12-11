@@ -16,3 +16,29 @@ for(var i = 1; i <= bank.length ; i++){
 }
 
 /* console.log(temp) */
+
+
+////// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+let bank = [5000, 1000 ,500, 100, 50, 20, 10, 50 ,2 ,1];
+let input = 270;
+let temp = 0;
+let total = 0;
+
+for(let i = 0 ; i <= bank.length-1 ; i++){
+    if(input >= bank[i]){
+        console.log(bank[i])
+        temp = temp + bank[i]; //390
+        // console.log(temp)
+        if(input > temp){
+            total = input - temp; //90;
+            if(total >= bank[i]){
+                i--;
+            }
+        }
+        else{
+            break;
+        }
+    }
+}
+// console.log(temp)
