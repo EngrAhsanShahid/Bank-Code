@@ -44,19 +44,23 @@ for(let i = 0 ; i <= bank.length-1 ; i++){
 // console.log(temp)
 
 
-//Another method
-let notes = [5000, 1000, 500, 100, 50, 20, 10, 5, 1];
-
+// Correct version
+let notes = [5000, 1000, 500];
 let withDrawalAmount = 40000;
+let temp = [];
+getNotes(withDrawalAmount)
 
-let temp = 0; 
-
-for(var i = 0 ; i <= notes.length-1 ; i++){
-    if(withDrawalAmount >= notes[i]){
-        temp = temp + notes[i];
-        withDrawalAmount = withDrawalAmount - notes[i];
-        console.log(notes[i])
-        i--;
+function getNotes(withDrawalAmount){
+    for(var i = 0 ; i <= notes.length-1 ; i++){
+        if(withDrawalAmount > notes[i]){
+            withDrawalAmount = withDrawalAmount - notes[i];
+            temp.push(notes[i]);
+            i--;
+        }
+        else if(withDrawalAmount == notes[i]){
+            temp.push(notes[i]);
+        }
     }
 }
+console.log(temp)
 
