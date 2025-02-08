@@ -42,3 +42,21 @@ for(let i = 0 ; i <= bank.length-1 ; i++){
     }
 }
 // console.log(temp)
+
+
+//Another method
+let notes = [5000, 1000, 500, 100, 50, 20, 10, 5, 1];
+
+let withDrawalAmount = 40000;
+
+let temp = 0; 
+
+for(var i = 0 ; i <= notes.length-1 ; i++){
+    if(withDrawalAmount >= notes[i]){
+        temp = temp + notes[i];
+        withDrawalAmount = withDrawalAmount - notes[i];
+        console.log(notes[i])
+        i--;
+    }
+}
+
