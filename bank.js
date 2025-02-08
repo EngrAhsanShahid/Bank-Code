@@ -44,11 +44,11 @@ for(let i = 0 ; i <= bank.length-1 ; i++){
 // console.log(temp)
 
 
-// Correct version
+//Correct version
 let notes = [5000, 1000, 500];
 let withDrawalAmount = 40000;
 let temp = [];
-getNotes(withDrawalAmount)
+let getCurrency = getNotes(withDrawalAmount)
 
 function getNotes(withDrawalAmount){
     for(var i = 0 ; i <= notes.length-1 ; i++){
@@ -61,6 +61,7 @@ function getNotes(withDrawalAmount){
             temp.push(notes[i]);
         }
     }
+    return temp;
 }
-console.log(temp)
+console.log(getCurrency)
 
